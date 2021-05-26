@@ -2,8 +2,12 @@
 ## This is a basic side car example using NGINX
 I originally found this [article](https://www.magalix.com/blog/implemeting-a-reverse-proxy-server-in-kubernetes-using-the-sidecar-pattern) with several typos explaining the basic concept of a Nginx side car. To summarize you add a proxy like Nginx that is a container in the same pod as your application. You can modify the default.conf in this example repo to change how nginx routes the traffic. You can access each othe ther containers using localhost:port and direct based on a url.
 
+### Basic Requirements
+* Have Docker Desktop Installed
+* 
+
 ### Project Setup
-* Clone this repo `git clone ` and open the folder in your favorite terminal
+* Clone this repo `git clone https://github.com/larry-cherry/flask-sidecar-example.git` and then open the folder in your favorite terminal
 * Next run `kubectl apply -f deployment.yml` to launch the deployment.
 * Open [localhost:32001](http://localhost:32001/) in your browswer and you should be greated with a message from the backend api
 * To remove the project `kubectl delete -f deployment.yml`
